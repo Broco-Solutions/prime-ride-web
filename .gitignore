@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+next-env.d.ts
+
+# debugging / temp
+*.log
+npm-debug.log*
+.DS_Store
+.cache/
+.turbo/
+
+# importer staging / temp
+.happyrun-staging-*/
+.strike-staging-*/
+scripts/.tmp/
+
+# windows zone identifiers (metadata junk)
+:Zone.Identifier
+*.Zone.Identifier
+
+# env secrets
+.env
+.env.*
+!.env.example
+
+# vercel
+.vercel/
+
+# source brand assets (already copied into public/)
+fotos/
