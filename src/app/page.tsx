@@ -1,20 +1,29 @@
 import Link from "next/link";
 import Image from "next/image";
-import { products, getFeaturedProducts } from "@/data/products";
+import type { Metadata } from "next";
+import { products, getBrands, getFeaturedProducts } from "@/data/products";
 import { categories } from "@/data/categories";
 import { siteConfig } from "@/config/site";
 import { ProductCard } from "@/components/ProductCard";
 import { ShowroomCta } from "@/components/CtaButtons";
 
+export const metadata: Metadata = {
+  title: "Prime Ride | Electric Bikes & Scooters in Miami",
+  description:
+    "Prime Ride is a Miami showroom for electric bikes, electric kick scooters and seated electric scooters from HAPPYRUN, JASION, GORTAX, HLOIE, iScooter and WAWSCOTE.",
+  alternates: { canonical: "/" },
+};
+
 export default function HomePage() {
   const featured = getFeaturedProducts();
+  const brandCount = getBrands().length;
 
   return (
     <>
       <section className="relative isolate overflow-hidden">
         <Image
           src="/images/showroom/frente-salon-1.jpeg"
-          alt="Prime Ride electric bike showroom in Miami"
+          alt="Prime Ride electric bike and scooter showroom in Miami"
           fill
           priority
           sizes="100vw"
@@ -26,12 +35,12 @@ export default function HomePage() {
             {siteConfig.tagline}
           </p>
           <h1 className="mt-4 max-w-3xl text-balance font-display text-4xl font-bold leading-[1.05] text-text sm:text-6xl">
-            Miami&apos;s home for electric bikes & motorcycles.
+            Miami&apos;s home for electric bikes &amp; scooters.
           </h1>
           <p className="mt-6 max-w-xl text-pretty text-lg text-muted">
-            We feature Strike Cycles and HappyRun performance electric rides —
-            from off-road dirt bikes to cargo haulers — all on display at our
-            Miami showroom.
+            We showcase electric bikes, electric kick scooters and seated
+            electric scooters from HAPPYRUN, JASION, GORTAX, HLOIE, iScooter and
+            WAWSCOTE — all on display at our Miami showroom.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -50,6 +59,35 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="border-y border-border bg-surface">
+        <div className="container-x grid grid-cols-2 gap-6 py-10 md:grid-cols-4">
+          <div>
+            <p className="font-display text-3xl font-bold text-text">
+              {products.length} Models
+            </p>
+            <p className="mt-1 text-sm text-muted">In the current catalog</p>
+          </div>
+          <div>
+            <p className="font-display text-3xl font-bold text-text">
+              {brandCount} Brands
+            </p>
+            <p className="mt-1 text-sm text-muted">Showcased in Miami</p>
+          </div>
+          <div>
+            <p className="font-display text-3xl font-bold text-text">
+              300W–750W
+            </p>
+            <p className="mt-1 text-sm text-muted">Motor power range</p>
+          </div>
+          <div>
+            <p className="font-display text-3xl font-bold text-text">
+              Miami
+            </p>
+            <p className="mt-1 text-sm text-muted">Showroom location</p>
+          </div>
+        </div>
+      </section>
+
       <section className="container-x py-16">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
@@ -57,7 +95,7 @@ export default function HomePage() {
               Featured rides
             </h2>
             <p className="mt-2 max-w-xl text-muted">
-              A curated selection of the electric bikes and motorcycles we
+              A curated selection of the electric bikes and scooters we
               showcase.
             </p>
           </div>

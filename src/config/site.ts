@@ -30,11 +30,15 @@ export const siteConfig = {
     { href: "/contact", label: "Contact" },
   ],
 
-  brands: [
-    { name: "Strike Cycles", url: "https://strikecycles.com" },
-    { name: "HappyRun", url: "https://www.happyrunsports.com" },
-  ],
-} as const;
+  brands: ([
+    { name: "HAPPYRUN" },
+    { name: "JASION" },
+    { name: "GORTAX" },
+    { name: "HLOIE" },
+    { name: "iScooter" },
+    { name: "WAWSCOTE" },
+  ]) as { name: string; url?: string }[],
+};
 
 export function phoneHref(phone: string = siteConfig.phone): string {
   const digits = phone.replace(/\D/g, "");

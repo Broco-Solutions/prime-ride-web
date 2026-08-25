@@ -1,8 +1,7 @@
 export type ProductCategorySlug =
-  | "electric-dirt-bikes"
   | "electric-bikes"
-  | "cargo-bikes"
-  | "electric-motorcycles";
+  | "electric-kick-scooters"
+  | "seated-electric-scooters";
 
 export interface ProductVariant {
   label: string;
@@ -18,17 +17,15 @@ export interface Product {
   slug: string;
   brand: string;
 
-  officialName: string;
   displayName: string;
 
   category: ProductCategorySlug;
 
   price: number;
-  compareAtPrice?: number;
-  priceLabel?: string;
+  power: number;
 
-  priceCheckedAt: string;
-  sourceUrl: string;
+  priceCheckedAt?: string;
+  sourceUrl?: string;
 
   description: string;
 
@@ -40,6 +37,7 @@ export interface Product {
   featured: boolean;
 
   variants?: ProductVariant[];
+  compareAtPrice?: number;
 }
 
 export interface Category {

@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -9,7 +8,7 @@ import { formatPrice } from "@/lib/format";
 import { productJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
 import { JsonLd } from "@/components/JsonLd";
 import { ProductGallery } from "@/components/ProductGallery";
-import { CtaButtons } from "@/components/CtaButtons";
+import { ProductCtas } from "@/components/CtaButtons";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -118,45 +117,15 @@ export default async function ProductPage({
 
           <p className="mt-6 text-pretty text-muted">{product.description}</p>
 
-          <div className="mt-6 flex items-end gap-4">
-            <div>
-              <p className="text-sm text-muted">From</p>
-              <p className="font-display text-3xl font-bold text-text">
-                {formatPrice(product.price)}
-              </p>
-            </div>
-            {typeof product.compareAtPrice === "number" &&
-            product.compareAtPrice > product.price ? (
-              <p className="pb-1 text-lg text-muted line-through">
-                {formatPrice(product.compareAtPrice)}
-              </p>
-            ) : null}
+          <div className="mt-6">
+            <p className="font-display text-3xl font-bold text-text">
+              {formatPrice(product.price)}
+            </p>
           </div>
 
           <div className="mt-8">
-            <CtaButtons product={product} />
+            <ProductCtas slug={product.slug} />
           </div>
-
-          {product.variants && product.variants.length > 0 ? (
-            <div className="mt-10">
-              <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">
-                Available configurations
-              </h2>
-              <ul className="mt-4 divide-y divide-border rounded-card border border-border">
-                {product.variants.map((variant) => (
-                  <li
-                    key={variant.label}
-                    className="flex items-center justify-between px-5 py-3 text-sm"
-                  >
-                    <span className="text-text">{variant.label}</span>
-                    <span className="font-medium text-muted">
-                      {formatPrice(variant.price)}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : null}
 
           {product.specifications.length > 0 ? (
             <div className="mt-10">
@@ -165,14 +134,13 @@ export default async function ProductPage({
               </h2>
               <dl className="mt-4 grid gap-px overflow-hidden rounded-card border border-border bg-border sm:grid-cols-2">
                 {product.specifications.map((spec) => (
-                  <div
-                    key={spec.label}
-                    className="bg-surface p-4"
-                  >
+                  <div key={spec.label} className="bg-surface p-4">
                     <dt className="text-xs uppercase tracking-wide text-muted">
                       {spec.label}
                     </dt>
-                    <dd className="mt-1 font-medium text-text">{spec.value}</dd>
+                    <dd className="mt-1 font-medium text-text">
+                      {spec.value}
+                    </dd>
                   </div>
                 ))}
               </dl>
@@ -180,9 +148,9 @@ export default async function ProductPage({
           ) : null}
 
           <p className="mt-8 text-xs text-muted">
-            Listed configurations and pricing reflect manufacturer information
-            and may change. Availability is subject to the brand&apos;s supply
-            and is not a guarantee of stock at Prime Ride.
+            Pricing and specifications shown reflect the latest information
+            provided to Prime Ride and may change. Contact Prime Ride to
+            confirm current availability.
           </p>
         </div>
       </div>

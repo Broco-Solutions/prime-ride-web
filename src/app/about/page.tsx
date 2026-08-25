@@ -7,7 +7,7 @@ import { ShowroomCta } from "@/components/CtaButtons";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Prime Ride is a Miami electric bike and electric motorcycle showroom featuring Strike Cycles and HappyRun.",
+    "Prime Ride is a Miami electric bike and electric scooter showroom featuring HAPPYRUN, JASION, GORTAX, HLOIE, iScooter and WAWSCOTE.",
   alternates: { canonical: "/about" },
 };
 
@@ -39,14 +39,15 @@ export default function AboutPage() {
             What we do
           </h2>
           <p className="mt-4 text-muted">
-            Prime Ride showcases electric bikes and electric motorcycles from
-            leading brands. Our {siteConfig.address.city} location lets you see
-            real models side by side, understand the specs that matter, and
-            decide what fits your riding style.
+            Prime Ride showcases electric bikes, electric kick scooters and
+            seated electric scooters from leading brands. Our{" "}
+            {siteConfig.address.city} location lets you see real models side by
+            side, understand the specs that matter, and decide what fits your
+            riding style.
           </p>
           <p className="mt-4 text-muted">
-            We feature Strike Cycles and HappyRun — from off-road electric dirt
-            bikes to fat-tire e-bikes and dual-battery cargo haulers.
+            We feature HAPPYRUN, JASION, GORTAX, HLOIE, iScooter and WAWSCOTE —
+            from electric bikes to compact kick scooters.
           </p>
         </div>
       </div>
@@ -63,11 +64,11 @@ export default function AboutPage() {
         </div>
         <div className="rounded-card border border-border bg-surface p-6">
           <h3 className="font-display text-xl font-bold text-text">
-            Two trusted brands
+            Trusted brands
           </h3>
           <p className="mt-2 text-sm text-muted">
-            We focus on Strike Cycles and HappyRun, known for performance
-            electric two-wheelers.
+            We showcase HAPPYRUN, JASION, GORTAX, HLOIE, iScooter and WAWSCOTE,
+            known for performance electric rides.
           </p>
         </div>
         <div className="rounded-card border border-border bg-surface p-6">

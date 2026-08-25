@@ -2,36 +2,28 @@ import type { Category, ProductCategorySlug } from "@/types/product";
 
 export const categories: Category[] = [
   {
-    slug: "electric-dirt-bikes",
-    name: "Electric Dirt Bikes",
+    slug: "electric-bikes",
+    name: "Electric Bikes",
     descriptor:
-      "Off-road electric motorcycles built for trails, jumps and rough terrain.",
+      "Pedal-assist and throttle electric bikes for commuting and weekend rides, on display at our Miami showroom.",
     image: "/images/showroom/salon-1.jpeg",
     number: "01",
   },
   {
-    slug: "electric-bikes",
-    name: "Electric Bikes",
+    slug: "electric-kick-scooters",
+    name: "Electric Kick Scooters",
     descriptor:
-      "Street-legal style fat-tire e-bikes for commuting and weekend rides.",
+      "Stand-up electric kick scooters — compact, portable and built for everyday city travel.",
     image: "/images/showroom/salon-2.jpeg",
     number: "02",
   },
   {
-    slug: "cargo-bikes",
-    name: "Cargo Bikes",
+    slug: "seated-electric-scooters",
+    name: "Seated Electric Scooters",
     descriptor:
-      "Dual-motor, dual-battery haulers engineered to move people and gear.",
+      "Seated electric scooters that add comfort for longer rides around Miami.",
     image: "/images/showroom/salon-3.jpeg",
     number: "03",
-  },
-  {
-    slug: "electric-motorcycles",
-    name: "Electric Motorcycles",
-    descriptor:
-      "High-power electric two-wheelers for riders who want real range.",
-    image: "/images/showroom/frente-salon-1.jpeg",
-    number: "04",
   },
 ];
 

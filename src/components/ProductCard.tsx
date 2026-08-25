@@ -5,10 +5,6 @@ import { formatPrice } from "@/lib/format";
 import { getCategoryName } from "@/data/categories";
 
 export function ProductCard({ product }: { product: Product }) {
-  const hasDiscount =
-    typeof product.compareAtPrice === "number" &&
-    product.compareAtPrice > product.price;
-
   return (
     <Link
       href={`/catalog/${product.slug}`}
@@ -22,11 +18,6 @@ export function ProductCard({ product }: { product: Product }) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        {hasDiscount ? (
-          <span className="absolute left-3 top-3 rounded-full bg-accent px-3 py-1 text-xs font-bold text-accent-foreground">
-            Save {formatPrice(product.compareAtPrice! - product.price)}
-          </span>
-        ) : null}
       </div>
 
       <div className="flex flex-1 flex-col p-5">
@@ -42,16 +33,12 @@ export function ProductCard({ product }: { product: Product }) {
 
         <div className="mt-4 flex items-end justify-between">
           <div>
-            <p className="text-sm text-muted">From</p>
+            <p className="text-sm text-muted">{product.power}W</p>
             <p className="font-display text-xl font-bold text-text">
               {formatPrice(product.price)}
             </p>
           </div>
-          {hasDiscount ? (
-            <p className="text-sm text-muted line-through">
-              {formatPrice(product.compareAtPrice!)}
-            </p>
-          ) : null}
+          <span className="text-sm font-medium text-accent">View details</span>
         </div>
       </div>
     </Link>

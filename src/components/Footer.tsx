@@ -62,15 +62,8 @@ export function Footer() {
           </h2>
           <ul className="mt-4 flex flex-col gap-2 text-sm">
             {siteConfig.brands.map((brand) => (
-              <li key={brand.url}>
-                <a
-                  href={brand.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-text transition-colors hover:text-accent"
-                >
-                  {brand.name}
-                </a>
+              <li key={brand.name} className="text-text">
+                {brand.name}
               </li>
             ))}
           </ul>

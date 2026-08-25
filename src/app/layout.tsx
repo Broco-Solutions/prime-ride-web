@@ -23,19 +23,19 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: "Prime Ride | Electric Bikes & Motorcycles in Miami",
+    default: "Prime Ride | Electric Bikes & Scooters in Miami",
     template: "%s | Prime Ride",
   },
   description:
-    "Prime Ride is a Miami showroom for electric dirt bikes, e-bikes, cargo bikes and electric motorcycles from Strike Cycles and HappyRun.",
+    "Prime Ride is a Miami showroom for electric bikes, electric kick scooters and seated electric scooters from HAPPYRUN, JASION, GORTAX, HLOIE, iScooter and WAWSCOTE.",
   applicationName: siteConfig.name,
   keywords: [
     "electric bikes Miami",
-    "electric motorcycle Miami",
-    "electric dirt bike",
-    "cargo e-bike",
-    "Strike Cycles",
-    "HappyRun",
+    "electric scooters Miami",
+    "electric kick scooter",
+    "seated electric scooter",
+    "HAPPYRUN",
+    "iScooter",
     "Prime Ride",
   ],
   authors: [{ name: siteConfig.legalName }],
@@ -44,15 +44,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.domain,
     siteName: siteConfig.name,
-    title: "Prime Ride | Electric Bikes & Motorcycles in Miami",
+    title: "Prime Ride | Electric Bikes & Scooters in Miami",
     description:
-      "Miami showroom for electric dirt bikes, e-bikes, cargo bikes and electric motorcycles.",
+      "Miami showroom for electric bikes, electric kick scooters and seated electric scooters.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prime Ride | Electric Bikes & Motorcycles in Miami",
+    title: "Prime Ride | Electric Bikes & Scooters in Miami",
     description:
-      "Miami showroom for electric dirt bikes, e-bikes, cargo bikes and electric motorcycles.",
+      "Miami showroom for electric bikes, electric kick scooters and seated electric scooters.",
   },
   icons: {
     icon: [{ url: "/icons/favicon.png", type: "image/png" }],

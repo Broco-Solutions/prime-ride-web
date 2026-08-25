@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
 import { MapPin, Clock, Phone, ArrowUpRight } from "lucide-react";
 import { siteConfig, phoneHref, formattedPhone } from "@/config/site";
+import { getProduct } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Visit the Prime Ride electric bike showroom in Miami. Find our address, hours and directions.",
+    "Visit the Prime Ride electric bike and scooter showroom in Miami. Find our address, hours and directions.",
   alternates: { canonical: "/contact" },
 };
 
-export default function ContactPage() {
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ product?: string }>;
+}) {
+  const { product: productSlug } = await searchParams;
+  const product = productSlug ? getProduct(productSlug) : undefined;
+  const subject = product ? product.displayName : null;
+
   return (
     <div className="container-x py-14">
       <header className="max-w-3xl">
@@ -20,6 +29,11 @@ export default function ContactPage() {
           Prime Ride is open daily in Miami. Stop by to see the lineup in
           person — there&apos;s no online form, just come say hi.
         </p>
+        {subject ? (
+          <p className="mt-4 rounded-full border border-accent px-4 py-2 text-sm font-semibold text-accent">
+            Ask us about the {subject}
+          </p>
+        ) : null}
       </header>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-3">

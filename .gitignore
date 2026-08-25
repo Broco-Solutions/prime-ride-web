@@ -31,3 +31,6 @@ scripts/.tmp/
 
 # source brand assets (already copied into public/)
 fotos/
+
+# typescript incremental build info
+*.tsbuildinfo
