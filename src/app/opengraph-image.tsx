@@ -23,7 +23,7 @@ export default async function OpengraphImage() {
         <div style={{ display: "flex", alignItems: "center" }}>
           <span
             style={{
-              color: "#c2f24a",
+              color: "#ffb400",
               fontSize: 40,
               fontWeight: 800,
               letterSpacing: -1,
