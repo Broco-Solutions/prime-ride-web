@@ -4,8 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
-import { Wordmark } from "@/components/Wordmark";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -23,7 +23,14 @@ export function Header() {
           onClick={() => setOpen(false)}
           aria-label={`${siteConfig.name} home`}
         >
-          <Wordmark />
+          <Image
+            src="/images/brand/prime-ride-logo-horizontal.jpeg"
+            alt="Prime Ride"
+            width={188}
+            height={48}
+            priority
+            className="h-10 w-[188px] object-contain object-center"
+          />
         </Link>
 
         <nav aria-label="Primary" className="hidden md:block">

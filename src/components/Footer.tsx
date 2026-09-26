@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
-import { Wordmark } from "@/components/Wordmark";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -9,8 +9,23 @@ export function Footer() {
     <footer className="mt-24 border-t border-border bg-surface">
       <div className="container-x grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
-          <Link href="/" className="text-2xl">
-            <Wordmark />
+          <Link href="/" className="inline-flex items-center gap-3">
+            <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-xl bg-black">
+              <Image
+                src="/images/brand/prime-ride-logo-emblem.jpeg"
+                alt=""
+                width={76}
+                height={76}
+                className="h-full w-full object-cover"
+              />
+            </span>
+            <Image
+              src="/images/brand/prime-ride-logo-horizontal.jpeg"
+              alt="Prime Ride"
+              width={188}
+              height={48}
+              className="h-10 w-[188px] object-contain object-center"
+            />
           </Link>
           <p className="mt-4 max-w-sm text-sm text-muted">
             Miami&apos;s electric bike and electric motorcycle showroom. We
