@@ -10,21 +10,12 @@ export function Footer() {
       <div className="container-x grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
           <Link href="/" className="inline-flex items-center gap-3">
-            <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-xl bg-black">
-              <Image
-                src="/images/brand/prime-ride-logo-emblem.jpeg"
-                alt=""
-                width={76}
-                height={76}
-                className="h-full w-full object-cover"
-              />
-            </span>
             <Image
-              src="/images/brand/prime-ride-logo-horizontal.jpeg"
+              src="/images/brand/prime-ride-logo-horizontal-web.png"
               alt="Prime Ride"
-              width={188}
-              height={48}
-              className="h-10 w-[188px] object-contain object-center"
+              width={230}
+              height={40}
+              className="h-12 w-[230px] object-contain object-left"
             />
           </Link>
           <p className="mt-4 max-w-sm text-sm text-muted">

@@ -24,12 +24,12 @@ export function Header() {
           aria-label={`${siteConfig.name} home`}
         >
           <Image
-            src="/images/brand/prime-ride-logo-horizontal.jpeg"
+            src="/images/brand/prime-ride-logo-horizontal-web.png"
             alt="Prime Ride"
-            width={188}
-            height={48}
+            width={230}
+            height={40}
             priority
-            className="h-10 w-[188px] object-contain object-center"
+            className="h-10 w-[210px] object-contain object-center md:w-[230px]"
           />
         </Link>
 
