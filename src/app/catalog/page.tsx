@@ -7,7 +7,7 @@ import { CatalogBrowser } from "@/components/CatalogBrowser";
 export const metadata: Metadata = {
   title: "Catalog",
   description:
-    "Browse Prime Ride's catalog of electric bikes, electric kick scooters and seated electric scooters from HAPPYRUN, JASION, GORTAX, HLOIE, iScooter and WAWSCOTE.",
+    "Explore a sample of Prime Ride's 18-model lineup of electric bikes and scooters. Visit our Miami showroom to see more options.",
   alternates: { canonical: "/catalog" },
 };
 
@@ -45,8 +45,9 @@ export default async function CatalogPage({
           The Catalog
         </h1>
         <p className="mt-4 text-muted">
-          Every model we showcase at Prime Ride. Filter by category, brand or
-          search to find the electric ride that fits your style.
+          These {products.length} models are a sample of our 18-model lineup.
+          Visit our Miami showroom to explore more options. Filter this selection
+          by category, brand or search.
         </p>
       </header>
 
@@ -66,4 +67,3 @@ export default async function CatalogPage({
     </div>
   );
 }
-

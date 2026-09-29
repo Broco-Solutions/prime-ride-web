@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { products, getBrands, getFeaturedProducts } from "@/data/products";
+import { getBrands, getFeaturedProducts } from "@/data/products";
 import { categories } from "@/data/categories";
 import { siteConfig } from "@/config/site";
 import { ProductCard } from "@/components/ProductCard";
@@ -64,9 +64,9 @@ export default function HomePage() {
         <div className="container-x grid grid-cols-2 gap-6 py-10 md:grid-cols-4">
           <div>
             <p className="font-display text-3xl font-bold text-text">
-              {products.length} Models
+              18 Models
             </p>
-            <p className="mt-1 text-sm text-muted">In the current catalog</p>
+            <p className="mt-1 text-sm text-muted">In our lineup</p>
           </div>
           <div>
             <p className="font-display text-3xl font-bold text-text">
@@ -76,7 +76,7 @@ export default function HomePage() {
           </div>
           <div>
             <p className="font-display text-3xl font-bold text-text">
-              300W–750W
+              750W–3000W
             </p>
             <p className="mt-1 text-sm text-muted">Motor power range</p>
           </div>
@@ -96,15 +96,15 @@ export default function HomePage() {
               Featured rides
             </h2>
             <p className="mt-2 max-w-xl text-muted">
-              A curated selection of the electric bikes and scooters we
-              showcase.
+              These featured rides are a sample of our 18-model lineup. Explore
+              more options at our Miami showroom.
             </p>
           </div>
           <Link
             href="/catalog"
             className="text-sm font-semibold text-accent hover:text-accent-strong"
           >
-            View all {products.length} models &rarr;
+            View the catalog &rarr;
           </Link>
         </div>
 

@@ -6,9 +6,11 @@ import Image from "next/image";
 export function ProductGallery({
   images,
   alt,
+  containImages = false,
 }: {
   images: string[];
   alt: string;
+  containImages?: boolean;
 }) {
   const [active, setActive] = useState(0);
 
@@ -23,7 +25,7 @@ export function ProductGallery({
           fill
           priority
           sizes="(max-width: 1024px) 100vw, 55vw"
-          className="object-cover"
+          className={containImages ? "object-contain p-4" : "object-cover"}
         />
       </div>
 
@@ -47,7 +49,7 @@ export function ProductGallery({
                   alt=""
                   fill
                   sizes="120px"
-                  className="object-cover"
+                  className={containImages ? "object-contain p-2" : "object-cover"}
                 />
               </button>
             </li>

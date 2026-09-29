@@ -5,6 +5,8 @@ import { formatPrice } from "@/lib/format";
 import { getCategoryName } from "@/data/categories";
 
 export function ProductCard({ product }: { product: Product }) {
+  const isKickScooter = product.category === "electric-kick-scooters";
+
   return (
     <Link
       href={`/catalog/${product.slug}`}
@@ -16,7 +18,7 @@ export function ProductCard({ product }: { product: Product }) {
           alt={`${product.brand} ${product.displayName}`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className={`${isKickScooter ? "object-contain p-4" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
         />
       </div>
 
