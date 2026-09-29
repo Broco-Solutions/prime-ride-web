@@ -22,15 +22,15 @@ export default function HomePage() {
     <>
       <section className="relative isolate overflow-hidden">
         <Image
-          src="/images/hero/prime-ride-hero.png"
+          src="/images/hero/fondo_prime_ride.png"
           alt="Electric bike and scooter at sunset"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-[65%_center] sm:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-bg/95 via-bg/65 to-bg/15" />
-        <div className="absolute inset-0 bg-gradient-to-t from-bg/65 via-transparent to-bg/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-bg/85 via-bg/55 to-bg/20 sm:from-bg/60 sm:via-bg/25 sm:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-bg/60 via-transparent to-transparent" />
         <div className="container-x relative z-10 flex min-h-[78vh] flex-col justify-center py-20">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
             {siteConfig.tagline}
