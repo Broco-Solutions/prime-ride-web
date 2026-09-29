@@ -5,20 +5,18 @@ import { formatPrice } from "@/lib/format";
 import { getCategoryName } from "@/data/categories";
 
 export function ProductCard({ product }: { product: Product }) {
-  const isKickScooter = product.category === "electric-kick-scooters";
-
   return (
     <Link
       href={`/catalog/${product.slug}`}
       className="group flex flex-col overflow-hidden rounded-card border border-border bg-surface transition-colors hover:border-accent"
     >
-      <div className="relative aspect-[4/3] overflow-hidden bg-surface-2">
+      <div className="relative aspect-[3/4] overflow-hidden bg-surface-2">
         <Image
           src={product.cardImage}
           alt={`${product.brand} ${product.displayName}`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className={`${isKickScooter ? "object-contain p-4" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
+          className="object-cover transition-transform duration-500 group-hover:scale-[1.025]"
         />
       </div>
 

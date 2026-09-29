@@ -103,7 +103,6 @@ export default async function ProductPage({
           <ProductGallery
             images={product.images}
             alt={`${product.brand} ${product.displayName}`}
-            containImages={product.category === "electric-kick-scooters"}
           />
         </div>
 

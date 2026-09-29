@@ -112,9 +112,7 @@ export const products: Product[] = [
       "The IScooter DX5 is a 650W seated electric scooter in Prime Ride's current Miami catalog.",
     images: [
       "/images/products/iscooter-dx5/01.jpeg",
-      "/images/products/iscooter-dx5/02.jpeg",
       "/images/products/iscooter-dx5/03.jpeg",
-      "/images/products/iscooter-dx5/04.jpeg",
     ],
     cardImage: "/images/products/iscooter-dx5/01.jpeg",
     specifications: [
